@@ -3,7 +3,7 @@ home: true
 heroImage: /favicon.ico
 
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /zh/guide/
 features:
 - title: 简洁至上
   details: 以 spring boot为核心驱动，搭载vue实现前后端分离。

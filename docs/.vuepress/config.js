@@ -40,7 +40,7 @@ module.exports = {
         nav: [
           { text: 'guide', link: '/guide/' }, // 内部链接 以docs为根目录
           { text: 'config', link: '/algorithm/' }, // 内部链接 以docs为根目录
-          { text: 'swagger api', link: 'https://api.zealsay.com/doc.html' }, // 外部链接
+          { text: 'swagger api', link: 'https://dev-api.zealsay.com/doc.html' }, // 外部链接
           { text: 'blog', link: 'https://blog.zealsay.com' }, // 外部链接
           // 下拉列表
           {

@@ -5,11 +5,11 @@ heroImage: /favicon.ico
 actionText: Getting Start →
 actionLink: /guide/
 features:
-- title: 简洁至上
-  details: 以 spring boot为核心驱动，搭载vue实现前后端分离。
-- title: Vue驱动
-  details: 享受 Vue +  nuxt 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: SSR服务器端渲染,为您页面提供完美的SEO,用前后端分离的方式去优雅的开发服务器端渲染应用。
+- title: Small and beautiful
+  details: Using Vue to build the app, it is easy to get started, and it is equipped with Nuxt.js server-side rendering to experience more extreme effects. The overall UI style uses the theme design library Vuetify based on the Material Design style. Of course, high performance should be matched with high value.
+- title: Powered by Spring Boot
+  details: The background uses Spring Boot mature solution, the code is simple and easy to use, the front-end separation mode, JWT check, Spring Security authorization, escort for the application.
+- title: Automated deployment
+  details: Equipped with travis or gitlab ci, it solves the development of DevOps, meets the continuous delivery, and can be built with the docker container service, equipped with k8s, making container management even more powerful.
 footer: MPL-2.0 Licensed | Copyright © 2019-present zeal
 ---

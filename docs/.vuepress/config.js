@@ -1,6 +1,4 @@
 module.exports = {
-  title: 'zealsay',
-  description: '让轻应用的构建更加简单',
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
@@ -13,13 +11,13 @@ module.exports = {
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
       lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator'
+      title: 'zealsay',
+      description: 'Make the construction of light applications easier'
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'Vue 驱动的静态网站生成器'
+      title: 'zealsay',
+      description: '让轻应用的构建更加简单'
     }
   },
   themeConfig: {

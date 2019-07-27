@@ -7,6 +7,4 @@ RUN rm /etc/nginx/conf.d/default.conf
 ADD default.conf /etc/nginx/conf.d/
 
 # 将dist文件中的内容复制到 /usr/share/nginx/html/ 这个目录下面
-COPY docs/.vuepress/dist  /usr/share/nginx/html/
-
-EXPOSE 6000
+COPY docs/.vuepress/dist/  /usr/share/nginx/html/

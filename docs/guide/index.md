@@ -1,34 +1,47 @@
-#  zealsay 
-------
- ![beta 1.0.0](https://img.shields.io/badge/beta-1.0.0-ff69b4.svg)
-![spring boot 2.0.4](https://img.shields.io/badge/spring%20boot-2.0.4-green.svg) ![swagger valid ](https://img.shields.io/badge/swagger-valid-brightgreen.svg) ![License MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-green.svg)  [![Build Status](https://travis-ci.org/GodLikeZeal/zealsay_backend.svg?branch=master)](https://travis-ci.org/GodLikeZeal/zealsay_backend) [![](https://img.shields.io/docker/stars/zealsay/zealsay_backend.svg)](https://hub.docker.com/r/zealsay/zealsay_backend 'DockerHub') [![](https://img.shields.io/docker/pulls/zealsay/zealsay_backend.svg)](https://hub.docker.com/r/zealsay/zealsay_backend 'DockerHub')
-## 开发指南
-请参考 [开发文档](https://www.zealsay.com)
 ## 介绍
-   zealsay是一套前后端分离的快速开发脚手架，后台采用的是最新的`Spring Boot 2.1.6.RELEASE`最新版本，
-   前端使用vue,搭载比较火热的`nuxt.js`服务器端渲染框架，截止到目前,使用的是`nuxt.js`最新`2.8.1`版本,
-   使用`Vuetify`构造出符合 `Material Design` 规范的扁平化风格主题UI,你有对美的偏爱,我同样有一份对美的执着,
-   面对日趋多样化的技术,抽取一些常用的解决方案,以快,轻为主,打造出一个开箱即用的轻应用脚手架,助力中小企业解决
-   快速部署以及持续交付的`DevOps`,本项目为zealsay后台项目，前端项目地址为[zealsay_front](https://github.com/GodLikeZeal/zealsay_front)
-## 技术选型
-### zealsay_backend（后台项目）
+### 什么是zealsay?
+zealsay是一套前后端分离的快速开发脚手架，后台采用的是最新的`Spring Boot 2.1.6.RELEASE`最新版本，
+   前端使用vue,搭载比较火热的`nuxt.js`服务器端渲染框架，截止到目前,使用的是`nuxt.js`最新`2.12.2`版本,
+   使用`Vuetify 2.x`构造出符合 `Material Design` 规范的扁平化风格主题UI,你有对美的偏爱,我同样有一份对美的执着,为什么都2020年了，后台管理系统不能做的好看一些呢？
+   面对日趋多样化的技术,抽取一些常用的解决方案,以快,轻为主,尽量追求功能与轻量之间的平衡，打造出一个开箱即用的轻应用脚手架,助力中小企业解决快速部署以及持续交付的`DevOps`。
+### 为什么选择zealsay?
+目前有很多优秀的开源java EE开发框架，在各自的场景都发挥着很重要的作用，想当初在ssm框架横行的年代，也帮助了包括我在内的很多小白，在刚开始的时候，有一个好用的开发框架真的是事半功倍，不过`java web`发展至今，从`jsp`,`servlet`,`ssh`,`ssm`,以及发展到现在的`spring boot`和`spring cloud`,技术的更新换代很快，开发方式也很快，随着前后端分离的开发模式普及，前端工程师的职位也越来越重要，而市面上三大前端框架的出现，也让前端程序员涨了一波工资，现在有一个问题是，在找别人的开源`java`快速开发框架的时候，或多或少会遇到以下问题：
+1. 框架使用的技术栈稍微老旧（相对我来讲），有些还在用`ssm`或`ssh`，甚至也有使用jsp或`freemaker`模板等并没有前后端分离。
+2. 功能太少不能满足需求，有些功能比较遗憾，但是二次开发复杂。
+3. 界面老旧不好看，我感觉可能是后台程序猿的通病，对界面没啥要求。
+4. 二次开发困难，文档少或没有，代码注释少。
+5. 开源协议不支持商用。
+6. 不更新或者不再维护。
+因此，我决定自己写一个快速开发的脚手架，整合一些常用的功能模块，封装一些常用的组件，搭配高颜值的UI，让编程不再是一件难事，让你的界面赏心悦目，让你有更多的时间去陪陪家人和孩子。
+俗话说，没有最好的技术，只有最适合自己的技术。
+> 如果以下场景能引起你的共鸣，那么不妨来试一试`zealsay`款基于`springboot`和`vue`,`nuxt`快速开发脚手架吧
+* 如果你的项目追求最新的技术栈，核心框架为基于`spring boot`，`mybatis-plus`,`spring sercurity`等技术栈。
+* 如果你期望脚手架功能有用户登录注册，第三方登录，角色管理，数据字典，权限配置，参数校验等。
+* 如果你前端追求的技术栈是`vue`,`vuex`,`axios`,`nuxt`并且喜欢Material Design风格样式的UI框架`Vuetify`的话。
+* 如果你期望你的网站能够响应式，并且最好还支持多种设备访问。
+* 如果你希望能拥抱`docker`，使用`k8s`容器编排,也对自动化构建`ci`工具爱不释手的话。
+### 技术选型
+#### 后台（zealsay_backend）
 - Framework : java 8
 - Maven 3.5.4
 - Lombok 1.18.8
 - Spring Boot 2.1.6
 - Spring Security
 - Spring Oauth2 (整合第三方登录)
+- Spring Validation(参数校验优雅自如)
 - jwt (JSON Web Token)
 - jasypt 加密
 - mapstruct (对象映射)
 - Mybatis + Mybatis Plus (持久层开发利器)
+- Fastjson (阿里json工具包)
 - Spring Boot Docker (容器服务)
 - Travis CI (自动化构建)
 - Mysql (mysql数据库)
 - Swagger 以及swagger bootstrap-ui (api文档在线生成)
-- RabbitMQ (消息中间件)
+- <s>RabbitMQ (消息中间件，个人博客示例中，为节省资源考虑去掉)</s>
 - Redis (Nosql内存数据库)
 - Hikari (高性能连接池)
+- Undertow(高性能服务器容器，告别tomcat和jetty)
 - Feign (外部服务调用，整合spring cloud后可以用于内部服务调用)
 - Logback (日志记录)
 - Actuator (服务监控)
@@ -36,155 +49,39 @@
 - 第三方SDK或服务
   - 七牛云对象云存储
   - Github第三方登录
-  - 微信第三方登录
-  - QQ第三方登录
+  - Gitee第三方登录
   - Hitokoto 一言接口
   - 阿里云短信服务
-  
-
-## 系统架构
-
-这里是架构图
-
-## 本地如何运行
-本地运行可以有两种方式,可以使用传统的运行spring boot应用程序 java -jar 形式,
-如果你本地安装了docker环境的话，也可以使用docker run的方式,
-当然如果你安装了docker-compose,使用编排的方式更简洁直观,用哪种方式运行取决于你的个人喜好。
-
-### 使用传统方式
-#### 运行依赖
-1.  确保本地安装jdk 1.8版本或以上。
-2.  安装maven环境。
-3.  安装git环境。
-4.  安装mysql数据库(如果你有远程的数据库可以不用本地安装)
-5.  安装redis(非必须,如果你不想使用,可以在bootstrap.yml里将redis配置这块去掉)
-6.  安装RabbitMQ(非必须,同理,如果你不想使用,可以在bootstrap.yml里将rabbitmq配置这块去掉)
-#### 代码检出
-`git clone https://github.com/GodLikeZeal/zealsay_backend.git`
-将代码clone到你的本地。
-#### 配置
--  你可以不使用jasypt加密,直接在`bootstrap.yml`里面配置相关的连接信息,
-当然,如果是一个企业级的项目的话,建议敏感信息还是使用加密保护比较好。
--  jasypt加密
-1.  可以参考jasypt官方文档,设置必要的相关参数
-2.  比如为了演示，我建立了一个 `Test`
-```java
-  @Test
-  public void testEncrypt() throws Exception {
-    PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
-    SimpleStringPBEConfig config = new SimpleStringPBEConfig();
-    config.setPassword("password"); //password
-    config.setAlgorithm("PBEWithMD5AndDES"); //加密盐
-    config.setKeyObtentionIterations("1000");
-    config.setPoolSize("1");
-    config.setProviderName("SunJCE"); //providerName
-    config.setSaltGeneratorClassName("org.jasypt.salt.RandomSaltGenerator"); //设置SaltGeneratorClassName
-    config.setStringOutputType("base64"); //输出格式
-    encryptor.setConfig(config);
-    String plainText = "test"; //需要加密的字符
-    String encryptedText = encryptor.encrypt(plainText);
-    System.out.println(encryptedText);
-    Assert.assertNotNull(encryptedText);
-  }
-```
-3.  由于使用了 `jasypt` 对敏感信息加密,
-因此可以看到在`bootstrap.yml`中的配置数据库链接部分都是被加密过的,
-你可以选择一个加密的`password`,比如我选择使用`key`作为加密的`password`,
-即`config.setPassword("key");`,假如你要加密的是你数据库的`HOST`域名 `www.xxxx.com`,
-那么可以 `String plainText = "www.xxxx.com";`。
-4.  运行启动一下`Test`可以发现在日志打印一串加密后的字符,比如我的执行后得到 `AnoQmUYGtHaw3J/Tdp9SVb9Gr0Gcl69bsCY0cDlqHUGD0mxt9FlGjvEXCB5qfqyDbNulQaZoROw=`
-然后这个值，你就可以在你`bootstrap.yml`配置数据库`HOST`的地方输入了,注意，一定要加上` ENC(你的加密值)`.
-
-#### 启动中间件和数据库
-- 启动mysql数据库,并且以上文所属的方法配置加密后的连接地址以及用户名和密码。
-- 启动redis数据库(如果配置了)
-- 启动RabbitMQ(如果配置了)
-
-#### 启动项目
--  配置启动参数`jasypt.encryptor.password=你的password`
--  debug或run 你的`application`
-
-### zealsay blog
-基于zealsay快应用框架构建的博客系统,包含一个blog前端和对应的后台管理系统,为简约,美观和高性能而生。已实现部分功能,项目目前仍在开发中。
-#### 在线预览
-[项目在线预览地址](https://beta.zealsay.com)
-#### 页面展示
-博客首页
-![image.png](https://pan.zealsay.com/20190716214935236000000.png)
-首页文章列表
-![image.png](https://pan.zealsay.com/20190716214936313000000.png)
-博客详情页
-![image.png](https://pan.zealsay.com/20190716214936530000000.png)
-后台登录页面
-![image.png](https://pan.zealsay.com/20190716214936631000000.png)
-dashboard
-![image.png](https://pan.zealsay.com/20190716214937367000000.png)
-用户列表
-![image.png](https://pan.zealsay.com/20190716214937929000000.png)
-文章添加
-![image.png](https://pan.zealsay.com/20190716214938738000000.png)
-markdown编辑器
-![image.png](https://pan.zealsay.com/20190716214939591000000.png)
-标签云管理
-![image.png](https://pan.zealsay.com/2019071621494080000000.png)
-主题设置
-![image.png](https://pan.zealsay.com/20190716214940767000000.png)
-#### TODO LIST
-*  登录模块
-* [x] 用户名密码登录 
-* [ ] Github第三方登录 
-* [ ] 微信第三方登录 
-* [ ] QQ第三方登录 
-* [x] 登录背景动态气泡效果
-*  用户模块
-* [x] 后台用户列表条件搜索
-* [x] 后台用户添加,删除
-* [x] 后台用户修改
-* [x] 后台用户详情
-* [x] 后台用户封禁解封
-* [ ] 个人中心(blog端和后台)
-* [ ] 用户等级level以及称号
-*  角色模块
-* [x] 角色列表
-* [x] 角色添加,删除
-* [x] 角色修改
-* [x] 角色详情
-*  文章模块
-* [x] 文章列表条件搜索
-* [x] 文章添加,删除
-* [x] 文章修改
-* [x] 文章预览
-* [x] 文章上下架
-* [x] blog端首页文章列表
-* [x] blog端根据类型搜索文章列表
-* [x] blog端根据标签label搜索文章列表
-* 标签云模块
-* [x] 标签列表条件搜索
-* [x] 标签添加,删除
-* [x] blog端标签云展示
-* [ ] blog端标签云动态气泡效果
-* 分类目录模块
-* [x] 分类目录树
-* [x] 分类目录添加,删除
-* [x] 分类目录修改
-* 其他模块
-* [x] 图片上传到服务器
-* [x] 图片裁剪
-* [x] sweetalert2弹窗样式自定义
-* [ ] 解决sweetalert2弹窗按钮颜色不能马上生效
-* [x] 增加markdown编辑器
-* [x] 首页鼠标hover图片变大动画效果
-* [ ] 博客端文章增加点赞功能
-* [ ] 博客端文章增加浏览量功能
-* [ ] 博客端关于页面，个人信息展示
-* [ ] 博客端评论系统
-* [ ] 用户自定义站点资源，如站点名称,meta,以及seo优化等
-* [ ] 博客端友链页面card展示
-* [ ] 后台dashboard流量，访问统计以及最新动态
-### 交流群
-![WechatIMG3.jpeg](https://pan.zealsay.com/20190716214941558000000.jpg)
-### 鸣谢
-
-- :kissing_heart::kissing_heart:感谢前端大佬[jinjinyike](https://github.com/jinjinyike)的顾问级别的帮助。
-- :heart::heart:最后感谢兜兜里有糖的理解和支持,没有她我完不成此项目,别问为什么,晚上不睡觉写代码会被打。
-- 关于nuxt文档,可以访问 [Nuxt.js docs](https://nuxtjs.org).
+  - 图灵机器人
+  - 邮箱Email服务
+#### 前端（zealsay_front）
+- Vue (前端炙手可热的三大框架之一)
+- Vuetify (基于Material Design风格规范优美的主题)
+- Vuex (全局状态管理)
+- Vue-Router (路由管理)
+- axios (axios请求)
+- eslint (格式化)
+- sass (sass样式语法)
+- vue-chartist (表格插件)
+- vue-scroll-reveal(滚动动画)
+- vue-concise-slider(vue漂亮轮播)
+- mdi/font (mdi字体和图标)
+- sweetalert2 (优美的弹窗)
+- vue-cropper (图片裁剪)
+- mavon-editor (md编辑器)
+- xss（防xss攻击）
+- travis ci (自动化ci)
+- docker (容器服务)
+### 中间件
+- redis
+### devlops架构图
+![系统架构图](https://pan.zealsay.com/mweb/2020061915925585465233.png)
+## 数据结构
+## 全局配置
+## 核心模块
+### 登录认证
+### 权限设置
+### 角色管理
+## 部署发布
+## 更新记录
+## 常见问题Q&A

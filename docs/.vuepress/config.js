@@ -2,6 +2,15 @@ module.exports = {
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
+    ['script', {}, `
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?5e7cfb3cf2e7138862c598b862b15540";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        `] //百度统计
   ],
   markdown: {
     // lineNumbers: true // 代码块显示行号
@@ -55,6 +64,17 @@ module.exports = {
                 link: 'https://github.com/GodLikeZeal/zealsay_front.git'
               }
             ]
+          },
+          // 下拉列表
+          {
+            text: 'Gitee',
+            items: [
+              { text: 'zealsay_backend', link: 'https://gitee.com/GodLikeZeal/zealsay_backend.git' },
+              {
+                text: 'zealsay_front',
+                link: 'https://gitee.com/GodLikeZeal/zealsay_front.git'
+              }
+            ]
           }
         ],
         sidebar: [
@@ -92,6 +112,17 @@ module.exports = {
               {
                 text: 'zealsay_front',
                 link: 'https://github.com/GodLikeZeal/zealsay_front.git'
+              }
+            ]
+          },
+          // 下拉列表
+          {
+            text: 'Gitee',
+            items: [
+              { text: 'zealsay_backend', link: 'https://gitee.com/GodLikeZeal/zealsay_backend.git' },
+              {
+                text: 'zealsay_front',
+                link: 'https://gitee.com/GodLikeZeal/zealsay_front.git'
               }
             ]
           }

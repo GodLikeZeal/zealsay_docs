@@ -1,4 +1,17 @@
 ## 介绍
+##  体验地址
+- 后台管理登录[https://beta.zealsay.com](https://beta.zealsay.com) 后台管理员用户名:admin 密码：abc123
+- api接口文档[https://dev-api.zealsay.com/doc.html](https://dev-api.zealsay.com/doc.html) 授权用户名：zealsay 密码:api123456
+#### 另外以本项目开发的博客系统已成功上线部署，欢迎体验[https://blog.zealsay.com](https://blog.zealsay.com) 后台体验账号：visitor 密码：abc123
+ 
+-------
+## 开源协议
+本项目遵循MIT开源协议，可以商用，可以二次开发，但请保留作者信息，也可多帮宣传，比心♥️♥️♥️
+## 开发指南
+- 开发文档： [zealsay开发文档](https://docs.zealsay.com)
+- github代码地址[zealsay_backend](https://github.com/GodLikeZeal/zealsay_backend)
+- gitee代码地址[zealsay_backend](https://gitee.com/GodLikeZeal/zealsay_backend)
+- 开发不易，占用了我几乎所有业余时间，精力与金钱付出换各位使用收益，望各位喜欢不吝顺手 star 以示支持，项目更好亦反馈予你。
 ### 什么是zealsay?
 zealsay是一套前后端分离的快速开发脚手架，后台采用的是最新的`Spring Boot 2.1.6.RELEASE`最新版本，
    前端使用vue,搭载比较火热的`nuxt.js`服务器端渲染框架，截止到目前,使用的是`nuxt.js`最新`2.12.2`版本,
